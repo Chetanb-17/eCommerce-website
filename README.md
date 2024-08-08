@@ -6,6 +6,6 @@ We are now working on an e-commerce website that includes the fundamental websit
 
 https://shopyfy-e-commerce.vercel.app/
 
-This project was tailwind with [Create React App] (https://github.com/facebook/create-react-app](https://github.com/Chetanb-17/eCommerce-website)).
+This project was tailwind with [Create React App](https://github.com/Chetanb-17/eCommerce-website)
 
  
