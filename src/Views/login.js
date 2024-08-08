@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { signInWithEmailAndPassword } from "firebase/auth";
-import { useNavigate } from "react-router-dom"; 
-import { auth } from "../config/firebase"; 
+import { signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
+import { auth } from "../config/firebase";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Logo from "../images/shopyfy-transparent.png";
@@ -17,6 +17,7 @@ function Login() {
   const [error, setError] = useState("");
 
   const navigate = useNavigate();
+  const provider = new GoogleAuthProvider();
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -25,20 +26,38 @@ function Login() {
     try {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       console.log("Userdata:", userCredential.user, userCredential.user.email);
-      // alert("user logged in succefully")
-      toast.success("Login successfull!", {
+      toast.success("Login successful!", {
         position: "top-center",
         autoClose: 2000,
       });
-      // navigate("/dashboard"); 
       setTimeout(() => {
         navigate("/dashboard");
       }, 2000);
     } catch (err) {
       setError(err.message);
-      toast.error(error.message, {
+      toast.error(err.message, {
         position: "top-center",
-        autoClose: 3000,
+        autoClose: 2000,
+      });
+    }
+  };
+
+  const handleGoogleSignIn = async () => {
+    try {
+      const result = await signInWithPopup(auth, provider);
+      const user = result.user;
+      console.log("Google Userdata:", user);
+      toast.success("Google login successful!", {
+        position: "top-center",
+        autoClose: 2000,
+      });
+      setTimeout(() => {
+        navigate("/dashboard");
+      }, 2000);
+    } catch (err) {
+      toast.error("Google login failed: " + err.message, {
+        position: "top-center",
+        autoClose: 2000,
       });
     }
   };
@@ -144,6 +163,7 @@ function Login() {
             <div className="flex align-center justify-evenly space-x-6">
               <button
                 type="button"
+                onClick={handleGoogleSignIn}
                 className="flex w-full justify-center items-center rounded-md border bg-white-600 px-3 py-1.5 text-sm font-semibold leading-6 text-black shadow-sm"
               >
                 Google &ensp;
