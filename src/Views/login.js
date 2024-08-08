@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import Logo from "../images/shopyfy-transparent.png";
 import laptopImage from "../images/laptop-macbook.jpg";
 import Header from "../Layout/header";
 import Divider from "../Components/Divider";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faGoogle } from "@fortawesome/free-brands-svg-icons";
-import GoogleIcon from "@mui/icons-material/Google";
 
 function Login() {
   return (
