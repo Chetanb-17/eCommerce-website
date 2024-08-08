@@ -1,7 +1,5 @@
 import Header from "../Layout/header";
 import { people } from "../config/config";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook, faGoogle } from "@fortawesome/free-brands-svg-icons";
 
 export default function About() {
   return (
