@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { auth } from "../config/firebase";
 import { ToastContainer, toast } from "react-toastify";
@@ -17,7 +17,7 @@ function Login() {
   const [error, setError] = useState("");
 
   const navigate = useNavigate();
-  const provider = new GoogleAuthProvider();
+
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -42,25 +42,7 @@ function Login() {
     }
   };
 
-  const handleGoogleSignIn = async () => {
-    try {
-      const result = await signInWithPopup(auth, provider);
-      const user = result.user;
-      console.log("Google Userdata:", user);
-      toast.success("Google login successful!", {
-        position: "top-center",
-        autoClose: 2000,
-      });
-      setTimeout(() => {
-        navigate("/dashboard");
-      }, 2000);
-    } catch (err) {
-      toast.error("Google login failed: " + err.message, {
-        position: "top-center",
-        autoClose: 2000,
-      });
-    }
-  };
+ 
 
   return (
     <>
@@ -143,7 +125,7 @@ function Login() {
                   type="submit"
                   className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 >
-                  Sign in
+                  Log in
                 </button>
               </div>
             </form>
@@ -163,7 +145,7 @@ function Login() {
             <div className="flex align-center justify-evenly space-x-6">
               <button
                 type="button"
-                onClick={handleGoogleSignIn}
+                // onClick={handleGoogleSignIn}
                 className="flex w-full justify-center items-center rounded-md border bg-white-600 px-3 py-1.5 text-sm font-semibold leading-6 text-black shadow-sm"
               >
                 Google &ensp;
