@@ -8,4 +8,4 @@ https://shopyfy-e-commerce.vercel.app/
 
 This project was tailwind with [Create React App](https://github.com/facebook/create-react-app).
 
-#Note : It is under Development.
+**Note : It is under Development.**
