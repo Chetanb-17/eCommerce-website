@@ -1,4 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { useNavigate } from "react-router-dom"; 
+import { auth } from "../config/firebase"; 
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Logo from "../images/shopyfy-transparent.png";
 import laptopImage from "../images/laptop-macbook.jpg";
 import Header from "../Layout/header";
@@ -7,6 +12,37 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faGoogle } from "@fortawesome/free-brands-svg-icons";
 
 function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+
+  const navigate = useNavigate();
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    setError("");
+
+    try {
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      console.log("Userdata:", userCredential.user, userCredential.user.email);
+      // alert("user logged in succefully")
+      toast.success("Login successfull!", {
+        position: "top-center",
+        autoClose: 2000,
+      });
+      // navigate("/dashboard"); 
+      setTimeout(() => {
+        navigate("/dashboard");
+      }, 2000);
+    } catch (err) {
+      setError(err.message);
+      toast.error(error.message, {
+        position: "top-center",
+        autoClose: 3000,
+      });
+    }
+  };
+
   return (
     <>
       <div
@@ -14,17 +50,23 @@ function Login() {
         style={{ backgroundImage: `url(${laptopImage})` }}
       >
         <Header />
-
+        <ToastContainer />
         <div className="relative isolate flex items-center justify-center min-h-screen px-6 pt-14 lg:px-8 bg-gray-100 bg-opacity-30">
           <div className="mx-auto w-full max-w-md bg-white shadow-lg rounded-lg py-8 px-6 sm:py-12 sm:px-10">
             <div className="flex justify-center mb-6">
               <img alt="Your Company" src={Logo} className="h-10 w-auto" />
             </div>
             <h2 className="text-center text-2xl font-bold leading-9 tracking-tight text-gray-900 mb-4">
-              Login to your Account
+              Log in to your Account
             </h2>
 
-            <form action="#" method="POST" className="space-y-6">
+            {error && (
+              <p className="text-center text-sm text-red-500 mb-4">
+                {error}
+              </p>
+            )}
+
+            <form onSubmit={handleLogin} className="space-y-6">
               <div>
                 <label
                   htmlFor="email"
@@ -39,6 +81,8 @@ function Login() {
                     type="email"
                     required
                     autoComplete="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
                 </div>
@@ -54,7 +98,7 @@ function Login() {
                   </label>
                   <div className="text-sm">
                     <a
-                      href="/login"
+                      href="/forgot-password"
                       className="font-semibold text-indigo-600 hover:text-indigo-500"
                     >
                       Forgot password?
@@ -68,6 +112,8 @@ function Login() {
                     type="password"
                     required
                     autoComplete="current-password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
                 </div>
@@ -84,12 +130,12 @@ function Login() {
             </form>
 
             <p className="mt-2 text-center text-sm text-gray-500">
-              Don't have an account ?
+              Don't have an account?
               <a
                 href="/signUp"
                 className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
               >
-                &ensp;Create an account.
+                &ensp;Create an account
               </a>
             </p>
 
@@ -97,18 +143,18 @@ function Login() {
 
             <div className="flex align-center justify-evenly space-x-6">
               <button
-                type="submit"
-                className="flex w-full justify-center items-center rounded-md border bg-white-600 px-3 py-1.5 text-sm font-semibold leading-6 text-black shadow-sm  "
+                type="button"
+                className="flex w-full justify-center items-center rounded-md border bg-white-600 px-3 py-1.5 text-sm font-semibold leading-6 text-black shadow-sm"
               >
                 Google &ensp;
                 <FontAwesomeIcon icon={faGoogle} className="text-blue-600" />
               </button>
 
               <button
-                type="submit"
-                className="flex w-full align-center justify-center items-center rounded-md border bg-white-600 px-3 py-1.5 text-sm font-semibold leading-6 text-black shadow-sm  "
+                type="button"
+                className="flex w-full align-center justify-center items-center rounded-md border bg-white-600 px-3 py-1.5 text-sm font-semibold leading-6 text-black shadow-sm"
               >
-                FaceBook&ensp;
+                Facebook&ensp;
                 <FontAwesomeIcon icon={faFacebook} className="text-blue-600" />
               </button>
             </div>
