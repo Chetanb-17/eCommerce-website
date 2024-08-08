@@ -2,10 +2,10 @@
 
 # Getting Started with Create React App
 
-This is eCommerce website we are Developing, this contains the basic website workflow.you can visit the website using below link 🔗.
+We are now working on an e-commerce website that includes the fundamental website operations.By clicking the link below, you may access the website 🞗.🔗.
 
 https://shopyfy-e-commerce.vercel.app/
 
 This project was tailwind with [Create React App](https://github.com/facebook/create-react-app).
 
-**Note : It is under Development.**
+ 
