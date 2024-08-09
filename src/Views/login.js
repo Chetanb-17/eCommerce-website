@@ -18,16 +18,13 @@ function Login() {
 
   const navigate = useNavigate();
 
+
   const handleLogin = async (e) => {
     e.preventDefault();
     setError("");
 
     try {
-      const userCredential = await signInWithEmailAndPassword(
-        auth,
-        email,
-        password
-      );
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
       console.log("Userdata:", userCredential.user, userCredential.user.email);
       toast.success("Login successful!", {
         position: "top-center",
@@ -44,6 +41,8 @@ function Login() {
       });
     }
   };
+
+ 
 
   return (
     <>
@@ -63,7 +62,9 @@ function Login() {
             </h2>
 
             {error && (
-              <p className="text-center text-sm text-red-500 mb-4">{error}</p>
+              <p className="text-center text-sm text-red-500 mb-4">
+                {error}
+              </p>
             )}
 
             <form onSubmit={handleLogin} className="space-y-6">

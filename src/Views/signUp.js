@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../config/firebase";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom"; 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Logo from "../images/shopyfy-transparent.png";
@@ -20,7 +20,7 @@ function Signup() {
   const handleSignUp = async (e) => {
     e.preventDefault();
     try {
-      console.log("send", auth, email, password);
+      console.log("send", auth, email, password)
       await createUserWithEmailAndPassword(auth, email, password);
       toast.success("User created successfully!", {
         position: "top-center",
@@ -138,6 +138,7 @@ function Signup() {
           </div>
         </div>
       </div>
+
     </>
   );
 }
