@@ -6,8 +6,8 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Logo from "../images/shopyfy-transparent.png";
 import laptopImage from "../images/laptop-macbook.jpg";
-import Header from "../layout/header";
-import Divider from "../components/divider";
+import Header from "../Layout/header";
+import Divider from "../Components/Divider";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faGoogle } from "@fortawesome/free-brands-svg-icons";
 
@@ -18,13 +18,16 @@ function Login() {
 
   const navigate = useNavigate();
 
-
   const handleLogin = async (e) => {
     e.preventDefault();
     setError("");
 
     try {
-      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      const userCredential = await signInWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
       console.log("Userdata:", userCredential.user, userCredential.user.email);
       toast.success("Login successful!", {
         position: "top-center",
@@ -41,8 +44,6 @@ function Login() {
       });
     }
   };
-
- 
 
   return (
     <>
@@ -62,9 +63,7 @@ function Login() {
             </h2>
 
             {error && (
-              <p className="text-center text-sm text-red-500 mb-4">
-                {error}
-              </p>
+              <p className="text-center text-sm text-red-500 mb-4">{error}</p>
             )}
 
             <form onSubmit={handleLogin} className="space-y-6">
