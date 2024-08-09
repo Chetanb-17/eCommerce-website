@@ -6,7 +6,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Logo from "../images/shopyfy-transparent.png";
 import laptopImage from "../images/laptop-macbook.jpg";
-import Header from "../Layout/header";
+import Header from "../layout/header";
 
 function Signup() {
   const [name, setName] = useState("");
