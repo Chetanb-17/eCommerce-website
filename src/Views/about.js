@@ -1,4 +1,4 @@
-import Header from "../layout/header";
+import Header from "../Layout/header";
 import { people } from "../config/config";
 
 export default function About() {
