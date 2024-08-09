@@ -1,10 +1,10 @@
 // src/App.js
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./Views/home";
-import Login from "./Views/login";
-import About from "./Views/about";
-import SignUp from "./Views/signUp";
+import Home from "./views/home";
+import Login from "./views/login";
+import About from "./views/about";
+import SignUp from "./views/signUp";
 import Dashboard from "./dashboard/dashboard";
 
 function NotFound() {
