@@ -70,8 +70,6 @@ const stats = [
 
 export default function Example() {
   return (
-    // <div className="relative isolate overflow-hidden bg-gray-900 h-full py-24 sm:py-32">
-
     <>
       <Header />
 
