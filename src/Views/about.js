@@ -138,17 +138,6 @@ export default function Example() {
                 ))}
               </dl>
 
-              {/* <div className="max-w-2xl mx-auto text-center">
-                <h2 className="text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl">
-                  About the team
-                </h2>
-                <p className="mt-6 text-lg leading-8 text-gray-100">
-                  We're a dynamic group of individuals who are passionate about
-                  what we do and dedicated to delivering the best results for
-                  our clients.
-                </p>
-              </div> */}
-
               <div className="mt-16 mx-auto max-w-2xl lg:mx-0">
                 <h4 className="text-4xl font-bold tracking-tight text-white sm:text-4xl">
                   About the team

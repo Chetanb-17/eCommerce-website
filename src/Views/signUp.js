@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../config/firebase";
-import { useNavigate } from "react-router-dom"; 
+import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Logo from "../images/shopyfy-transparent.png";
-import laptopImage from "../images/laptop-macbook.jpg";
+import animatedBg from "../images/AnimatedBG.jpg";
 import Header from "../Layout/header";
 
 function Signup() {
@@ -20,7 +20,7 @@ function Signup() {
   const handleSignUp = async (e) => {
     e.preventDefault();
     try {
-      console.log("send", auth, email, password)
+      console.log("send", auth, email, password);
       await createUserWithEmailAndPassword(auth, email, password);
       toast.success("User created successfully!", {
         position: "top-center",
@@ -42,11 +42,11 @@ function Signup() {
     <>
       <div
         className="relative bg-cover bg-center min-h-screen overflow-hidden"
-        style={{ backgroundImage: `url(${laptopImage})` }}
+        style={{ backgroundImage: `url(${animatedBg})` }}
       >
         <Header />
         <ToastContainer />
-        <div className="relative isolate flex items-center justify-center min-h-screen px-6 pt-14 lg:px-8 bg-gray-100 bg-opacity-30">
+        <div className="relative isolate flex items-center justify-center min-h-screen px-6 pt-14 lg:px-8 ">
           <div className="mx-auto w-full max-w-md bg-white shadow-lg rounded-lg py-8 px-6 sm:py-12 sm:px-10">
             <div className="flex justify-center mb-6">
               <img alt="Your Company" src={Logo} className="h-10 w-auto" />
@@ -138,7 +138,6 @@ function Signup() {
           </div>
         </div>
       </div>
-
     </>
   );
 }
