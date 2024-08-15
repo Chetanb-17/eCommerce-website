@@ -21,7 +21,7 @@ function Header() {
 
   return (
     <>
-      <header className="absolute inset-x-0 top-0 z-50  bg-white drop-shadow-xl">
+      <header className="fixed inset-x-0 top-0 z-50  bg-white drop-shadow-xl">
         <nav
           aria-label="Global"
           className="flex items-center justify-between p-4 lg:px-8"
@@ -42,13 +42,14 @@ function Header() {
               <Bars3Icon aria-hidden="true" className="h-6 w-6" />
             </button>
           </div>
+
           <div className="hidden lg:flex lg:gap-x-12">
             {navigation.map((item) =>
               item.name !== "Home" ? (
                 <Popover key={item.name} className="relative">
                   <PopoverButton
                     onClick={() => handleNavItemClick(item.name)}
-                    className="inline-flex items-center gap-x-1 text-md font-semibold leading-6  text-black hover:bg-indigo-600 hover:text-white rounded-md px-3 py-2"
+                    className="inline-flex items-center gap-x-1 text-md font-semibold leading-6 text-black hover:bg-indigo-600 hover:text-white rounded-md px-3 py-2"
                     style={{
                       backgroundColor: activeNavItem === item.name ? "" : "",
                     }}
@@ -56,27 +57,67 @@ function Header() {
                     <span>{item.name} </span>
                   </PopoverButton>
 
-                  <PopoverPanel className="absolute left-1/2 z-10 mt-5 flex w-screen max-w-md -translate-x-1/2 px-4 transition">
-                    <div className="w-screen max-w-md flex-auto overflow-hidden rounded-md bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
+                  {/* <PopoverPanel className="fixed left-1/2 z-10 mt-5 flex w-full max-w-7xl -translate-x-1/2 px-4 transition">
+                    <div className="w-screen max-w-7xl flex-auto overflow-hidden bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
                       <div
-                        className="p-4 grid grid-cols-auto-fit gap-2"
+                        className="p-6 grid grid-cols-auto-fit gap-4"
                         style={{
-                          gridTemplateColumns:
-                            "repeat(auto-fit, minmax(100px, 1fr))",
+                          gridTemplateColumns: "repeat(6, minmax(120px, 1fr))", // Increased min-width for columns
                         }}
                       >
-                        {(filteredSolutions || []).map((solution) => (
+                        {(filteredSolutions || []).map((category) => (
                           <div
-                            key={solution.name}
-                            className="group relative flex items-center gap-x-6 rounded-lg p-2 hover:bg-gray-50"
+                            key={category.name}
+                            className="group relative flex flex-col p-4 hover:bg-gray-50 text-base font-serif"
                           >
-                            <a
-                              href={solution.href}
-                              className="font-semibold text-gray-900"
-                            >
-                              {solution.name}
-                              <span className="absolute inset-0" />
-                            </a>
+                            <h3 className="text-sm font-bold text-red-800 mb-2">
+                              {category.name}
+                            </h3>
+                            {category.subcategories && (
+                              <div className="pl-4">
+                                {category.subcategories.map((subcat) => (
+                                  <a
+                                    key={subcat.name}
+                                    href={subcat.href}
+                                    className="block   text-black hover:text-red-500 mb-1 text-xs"
+                                  >
+                                    {subcat.name}
+                                  </a>
+                                ))}
+                              </div>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </PopoverPanel> */}
+                  <PopoverPanel className="fixed left-1/2 z-10 mt-5 flex w-full max-w-7xl -translate-x-1/2 px-4 transition">
+                    <div className="w-screen max-w-7xl flex-auto overflow-hidden bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
+                      <div
+                        className="p-6 grid gap-6"
+                        style={{
+                          gridTemplateColumns:
+                            "repeat(auto-fit, minmax(150px, 1fr))", // Adjust the min-width to control column width
+                        }}
+                      >
+                        {(filteredSolutions || []).map((category) => (
+                          <div key={category.name} className="flex flex-col">
+                            <h3 className="text-sm font-bold text-red-600 mb-2">
+                              {category.name}
+                            </h3>
+                            {category.subcategories && (
+                              <div>
+                                {category.subcategories.map((subcat) => (
+                                  <a
+                                    key={subcat.name}
+                                    href={subcat.href}
+                                    className="block text-black hover:text-red-500 mb-1 text-sm font-sans  "
+                                  >
+                                    {subcat.name}
+                                  </a>
+                                ))}
+                              </div>
+                            )}
                           </div>
                         ))}
                       </div>

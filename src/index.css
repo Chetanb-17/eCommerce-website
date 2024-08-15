@@ -18,6 +18,6 @@ code {
 /* Card Height */
 
 .dashCard {
-  height: 300px;
-  width: 200px;
+  height: 500px !important;
+  width: 150px;
 }

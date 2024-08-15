@@ -30,12 +30,12 @@ export default function Dashboard() {
     <>
       <Header />
       <br />
-      <div className="p-4 mt-16">
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-7">
+      <div className="p-4 mt-16 ">
+        {/* <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-8 ">
           {products.map((product) => (
             <div
               key={product.id}
-              className="group relative cursor-pointer   sm:h-full sm:w-full md:dashCard lg:dashCard xl:dashCard  border-2 border-custom-red rounded-xl"
+              className="group relative cursor-pointer   border-2 border-custom-red "
               // className="bg-white border border-gray-200 rounded-l  shadow-md overflow-hidden"
               onClick={() => {
                 setSelectedProduct(product);
@@ -45,13 +45,101 @@ export default function Dashboard() {
               <img
                 src={product.imageSrc}
                 alt={product.imageAlt}
-                className="w-full h-full object-cover rounded-lg"
+                className="bg-gray-400 bg-opacity-100 object-fit group-hover:opacity-60  "
               />
-              <div className="absolute inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="text-white text-center p-4">
-                  <h3 className="text-xl font-bold">{product.name}</h3>
-                  <p className="mt-2 text-lg">{product.price}</p>
+
+              <div className="absolute inset-0 content-end bg-opacity-50 transition-opacity duration-300">
+                <div className="flex justify-center items-center w-24 ml-1 h-6 mb-1 opacity-90 text-red-500 bg-zinc-100">
+                  <h3 className="text-xs text-black font-bold flex items-center">
+                    <a
+                      href={product.href}
+                      className="flex items-center space-x-1"
+                    >
+                      <span aria-hidden="true" className="absolute inset-0" />
+                      <span>{product.rating}</span>
+                      <StarIcon
+                        aria-hidden="true"
+                        className="text-green-600 h-4 w-4 flex-shrink-0"
+                      />
+                      <span>|</span>
+                      <span>{product.reviewCount}</span>
+                    </a>
+                  </h3>
                 </div>
+
+                <div className="p-3 flex justify-between bg-white">
+                  <div>
+                    <h3 className="text-sm text-black font-semibold">
+                      <a href={product.href}>
+                        <span aria-hidden="true" className="absolute inset-0" />
+                        {product.name}
+                      </a>
+                    </h3>
+                    <span className="text-xs">{product.decscription}</span>
+                    <p className="mt-1 text-sm   text-black font-bold ">
+                      {product.offerPrice}{" "}
+                      <strike className="text-xs font-normal text-orange-600 ml-1">
+                        {product.originalPrice}
+                      </strike>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div> */}
+
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-8">
+          {products.map((product) => (
+            <div
+              key={product.id}
+              className="group relative cursor-pointer border-2 border-custom-red  overflow-hidden"
+              onClick={() => {
+                setSelectedProduct(product);
+                setOpen(true);
+              }}
+            >
+              <div className="relative aspect-w-1 aspect-h-1">
+                <img
+                  src={product.imageSrc}
+                  alt={product.imageAlt}
+                  className="object-cover w-full h-full group-hover:opacity-60"
+                />
+
+                <div className="absolute inset-0 flex flex-col p-1 bg-opacity-50 transition-opacity duration-300">
+                  <div className="flex flex-col items-start justify-end w-full h-full ">
+                    <div className="flex items-center space-x-1 opacity-90 text-red-500 bg-zinc-200 p-1">
+                      <h3 className="text-xs text-black font-bold flex items-center">
+                        <a
+                          href={product.href}
+                          className="flex items-center space-x-1"
+                        >
+                          <span aria-hidden="true" className="text-xs" />
+                          <span className="text-xs">{product.rating}</span>
+                          <StarIcon
+                            aria-hidden="true"
+                            className="text-green-600 h-4 w-4 flex-shrink-0 text-xs"
+                          />
+                          <span>|</span>
+                          <span className="text-xs">{product.reviewCount}</span>
+                        </a>
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex flex-col bg-white p-2">
+                <h3 className="text-sm text-black font-semibold">
+                  <a href={product.href}>{product.name}</a>
+                </h3>
+                <span className="text-xs">{product.decscription}</span>
+                <p className="mt-1 text-sm text-black font-bold">
+                  {product.offerPrice}{" "}
+                  <strike className="text-xs font-normal text-orange-600 ml-1">
+                    {product.originalPrice}
+                  </strike>
+                </p>
               </div>
             </div>
           ))}
