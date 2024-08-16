@@ -1,11 +1,21 @@
 import React, { useState } from "react";
-import { Dialog, DialogPanel } from "@headlessui/react";
+import {
+  Dialog,
+  DialogPanel,
+  Disclosure,
+  Popover,
+  PopoverButton,
+  PopoverPanel,
+} from "@headlessui/react";
+
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import headerLogo from "../images/shopyfy-transparent.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBell, faUserCircle } from "@fortawesome/free-regular-svg-icons";
-import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
 import { navigation, data } from "../config/config";
+
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import { faHeart } from "@fortawesome/free-regular-svg-icons";
 
 function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -13,7 +23,6 @@ function Header() {
   const [filteredSolutions, setFilteredSolutions] = useState(
     data["Home"] || []
   );
-
   const handleNavItemClick = (itemName) => {
     setActiveNavItem(itemName);
     setFilteredSolutions(data[itemName] || []);
@@ -32,14 +41,26 @@ function Header() {
               <img alt="" src={headerLogo} className="h-10 w-auto" />
             </a>
           </div>
-          <div className="flex lg:hidden">
+          <div className="flex items-center align-middle lg:hidden">
+            <a
+              href="/login"
+              className="rounded-md px-3 py-2 text-white shadow-sm hover:bg-slate-200 focus-visible:outline focus-visible:outline-2 text-md font-bold leading-6 text-white-900"
+            >
+              <FontAwesomeIcon
+                icon={faHeart}
+                className="text-indigo-600 w-6  h-5 mr-1"
+              />
+            </a>
             <button
               type="button"
               onClick={() => setMobileMenuOpen(true)}
               className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-black"
             >
               <span className="sr-only">Open main menu</span>
-              <Bars3Icon aria-hidden="true" className="h-6 w-6" />
+              <Bars3Icon
+                aria-hidden="true"
+                className="h-6 w-6 text-indigo-600"
+              />
             </button>
           </div>
 
@@ -57,40 +78,6 @@ function Header() {
                     <span>{item.name} </span>
                   </PopoverButton>
 
-                  {/* <PopoverPanel className="fixed left-1/2 z-10 mt-5 flex w-full max-w-7xl -translate-x-1/2 px-4 transition">
-                    <div className="w-screen max-w-7xl flex-auto overflow-hidden bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
-                      <div
-                        className="p-6 grid grid-cols-auto-fit gap-4"
-                        style={{
-                          gridTemplateColumns: "repeat(6, minmax(120px, 1fr))", // Increased min-width for columns
-                        }}
-                      >
-                        {(filteredSolutions || []).map((category) => (
-                          <div
-                            key={category.name}
-                            className="group relative flex flex-col p-4 hover:bg-gray-50 text-base font-serif"
-                          >
-                            <h3 className="text-sm font-bold text-red-800 mb-2">
-                              {category.name}
-                            </h3>
-                            {category.subcategories && (
-                              <div className="pl-4">
-                                {category.subcategories.map((subcat) => (
-                                  <a
-                                    key={subcat.name}
-                                    href={subcat.href}
-                                    className="block   text-black hover:text-red-500 mb-1 text-xs"
-                                  >
-                                    {subcat.name}
-                                  </a>
-                                ))}
-                              </div>
-                            )}
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </PopoverPanel> */}
                   <PopoverPanel className="fixed left-1/2 z-10 mt-5 flex w-full max-w-7xl -translate-x-1/2 px-4 transition">
                     <div className="w-screen max-w-7xl flex-auto overflow-hidden bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
                       <div
@@ -101,9 +88,12 @@ function Header() {
                         }}
                       >
                         {(filteredSolutions || []).map((category) => (
-                          <div key={category.name} className="flex flex-col">
+                          <div
+                            key={category.MainCategory}
+                            className="flex flex-col"
+                          >
                             <h3 className="text-sm font-bold text-red-600 mb-2">
-                              {category.name}
+                              {category.MainCategory}
                             </h3>
                             {category.subcategories && (
                               <div>
@@ -141,6 +131,16 @@ function Header() {
               className="rounded-md px-3.5 py-2.5 text-white shadow-sm hover:bg-slate-200 focus-visible:outline focus-visible:outline-2 text-md font-bold leading-6 text-white-900"
             >
               <FontAwesomeIcon
+                icon={faHeart}
+                className="text-indigo-600   h-6"
+              />
+            </a>
+
+            <a
+              href="/login"
+              className="rounded-md px-3.5 py-2.5 text-white shadow-sm hover:bg-slate-200 focus-visible:outline focus-visible:outline-2 text-md font-bold leading-6 text-white-900"
+            >
+              <FontAwesomeIcon
                 icon={faBell}
                 className="text-indigo-600   h-6"
               />
@@ -157,6 +157,7 @@ function Header() {
             </a>
           </div>
         </nav>
+
         <Dialog
           open={mobileMenuOpen}
           onClose={() => setMobileMenuOpen(false)}
@@ -178,25 +179,72 @@ function Header() {
                 <XMarkIcon aria-hidden="true" className="h-6 w-6" />
               </button>
             </div>
-            <div className="mt-6 flow-root">
+            <div className="mt-8 flow-root">
               <div className="-my-6 divide-y divide-gray-500/10">
-                <div className="space-y-2 py-6">
-                  {navigation.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white-900 hover:bg-white-50"
-                    >
-                      {item.name}
-                    </a>
-                  ))}
-                </div>
+                {Object.entries(data).map(([categoryName, sections]) => (
+                  <Disclosure as="div" key={categoryName} className="-mx-3">
+                    {({ open }) => (
+                      <>
+                        <Disclosure.Button className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-bold leading-7 text-gray-900 hover:bg-indigo-600 hover:text-white">
+                          {categoryName}
+                          {sections && (
+                            <ChevronDownIcon
+                              aria-hidden="true"
+                              className={`h-5 w-5 flex-none transition-transform duration-200 ${
+                                open ? "rotate-180" : ""
+                              }`}
+                            />
+                          )}
+                        </Disclosure.Button>
+                        {sections && (
+                          <Disclosure.Panel className="mt-2 space-y-2 pl-4">
+                            {sections.map((section) => (
+                              <Disclosure as="div" key={section.MainCategory}>
+                                {({ open }) => (
+                                  <>
+                                    <Disclosure.Button className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7  text-black hover:text-indigo-600">
+                                      {section.MainCategory}
+                                      {section.subcategories && (
+                                        <ChevronDownIcon
+                                          aria-hidden="true"
+                                          className={`h-5 w-5 flex-none transition-transform duration-200 ${
+                                            open ? "rotate-180" : ""
+                                          }`}
+                                        />
+                                      )}
+                                    </Disclosure.Button>
+                                    {section.subcategories && (
+                                      <Disclosure.Panel className="mt-2 space-y-2">
+                                        {section.subcategories.map(
+                                          (subcategory) => (
+                                            <Disclosure.Button
+                                              key={subcategory.name}
+                                              as="a"
+                                              href={subcategory.href}
+                                              className="block rounded-lg py-2 pl-6 pr-3 text-sm  leading-7 text-black "
+                                            >
+                                              {subcategory.name}
+                                            </Disclosure.Button>
+                                          )
+                                        )}
+                                      </Disclosure.Panel>
+                                    )}
+                                  </>
+                                )}
+                              </Disclosure>
+                            ))}
+                          </Disclosure.Panel>
+                        )}
+                      </>
+                    )}
+                  </Disclosure>
+                ))}
                 <div className="py-6">
                   <a
                     href="/login"
-                    className="-mx-3 block   text-base font-semibold leading-6 text-white-900  "
+                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 bg-indigo-600 text-white"
                   >
-                    Login &rarr;
+                    Log in
                   </a>
                 </div>
               </div>

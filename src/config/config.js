@@ -1,12 +1,3 @@
-import {
-  ArrowPathIcon,
-  ChartPieIcon,
-  CursorArrowRaysIcon,
-  FingerPrintIcon,
-  SquaresPlusIcon,
-} from "@heroicons/react/24/outline";
-import { PhoneIcon, PlayCircleIcon } from "@heroicons/react/20/solid";
-
 const people = [
   {
     name: "Chetan Biradar",
@@ -37,7 +28,7 @@ const navigation = [
 const data = {
   Men: [
     {
-      name: "Topwear",
+      MainCategory: "Topwear",
       subcategories: [
         { name: "T-Shirts", href: "/dashboard" },
         { name: "Casual Shirts", href: "#" },
@@ -51,7 +42,7 @@ const data = {
       ],
     },
     {
-      name: "Indian & Festive Wear",
+      MainCategory: "Indian & Festive Wear",
       subcategories: [
         { name: "Kurtas & Kurta Sets", href: "#" },
         { name: "Sherwanis", href: "#" },
@@ -60,7 +51,7 @@ const data = {
       ],
     },
     {
-      name: "Bottomwear",
+      MainCategory: "Bottomwear",
       subcategories: [
         { name: "Jeans", href: "#" },
         { name: "Casual Trousers", href: "#" },
@@ -70,7 +61,7 @@ const data = {
       ],
     },
     {
-      name: "Innerwear & Sleepwear",
+      MainCategory: "Innerwear & Sleepwear",
       subcategories: [
         { name: "Briefs & Trunks", href: "#" },
         { name: "Boxers", href: "#" },
@@ -81,7 +72,7 @@ const data = {
     },
 
     {
-      name: "Footwear",
+      MainCategory: "Footwear",
       subcategories: [
         { name: "Casual Shoes", href: "#" },
         { name: "Sports Shoes", href: "#" },
@@ -93,7 +84,7 @@ const data = {
       ],
     },
     {
-      name: "Fashion Accessories",
+      MainCategory: "Fashion Accessories",
       subcategories: [
         { name: "Wallets", href: "#" },
         { name: "Belts", href: "#" },
@@ -110,14 +101,14 @@ const data = {
       ],
     },
     {
-      name: "Personal Care & Grooming",
+      MainCategory: "Personal Care & Grooming",
       subcategories: [
         { name: "Sunglasses & Frames", href: "#" },
         { name: "Watches", href: "#" },
       ],
     },
     {
-      name: "Sports & Active Wear",
+      MainCategory: "Sports & Active Wear",
       subcategories: [
         { name: "Sports Shoes", href: "#" },
         { name: "Sports Sandals", href: "#" },
@@ -130,7 +121,7 @@ const data = {
       ],
     },
     {
-      name: "Gadgets",
+      MainCategory: "Gadgets",
       subcategories: [
         { name: "Smart Wearables", href: "#" },
         { name: "Fitness Gadgets", href: "#" },
@@ -140,7 +131,7 @@ const data = {
     },
 
     {
-      name: "Bags & Backpacks",
+      MainCategory: "Bags & Backpacks",
       subcategories: [
         { name: "Bags & Backpacks", href: "#" },
         { name: "Luggages & Trolleys", href: "#" },
@@ -150,7 +141,7 @@ const data = {
 
   Women: [
     {
-      name: "Indian & Fusion Wear",
+      MainCategory: "Indian & Fusion Wear",
       href: "#",
       subcategories: [
         { name: "Kurtas & Suits", href: "#" },
@@ -168,7 +159,7 @@ const data = {
       ],
     },
     {
-      name: "Western Wear",
+      MainCategory: "Western Wear",
       href: "#",
       subcategories: [
         { name: "Dresses", href: "#" },
@@ -188,7 +179,7 @@ const data = {
     },
 
     {
-      name: "Footwear",
+      MainCategory: "Footwear",
       href: "#",
       subcategories: [
         { name: "Flats", href: "#" },
@@ -199,7 +190,7 @@ const data = {
       ],
     },
     {
-      name: "Sports & Active Wear",
+      MainCategory: "Sports & Active Wear",
       href: "#",
       subcategories: [
         { name: "Clothing", href: "#" },
@@ -209,7 +200,7 @@ const data = {
       ],
     },
     {
-      name: "Lingerie & Sleepwear",
+      MainCategory: "Lingerie & Sleepwear",
       href: "#",
       subcategories: [
         { name: "Bra", href: "#" },
@@ -221,7 +212,7 @@ const data = {
       ],
     },
     {
-      name: "Beauty & Personal Care",
+      MainCategory: "Beauty & Personal Care",
       href: "#",
       subcategories: [
         { name: "Makeup", href: "#" },
@@ -232,7 +223,7 @@ const data = {
       ],
     },
     {
-      name: "Gadgets",
+      MainCategory: "Gadgets",
       href: "#",
       subcategories: [
         { name: "Smart Wearables", href: "#" },
@@ -242,7 +233,7 @@ const data = {
       ],
     },
     {
-      name: "Jewellery",
+      MainCategory: "Jewellery",
       href: "#",
       subcategories: [
         { name: "Fashion Jewellery", href: "#" },
@@ -251,30 +242,30 @@ const data = {
       ],
     },
     {
-      name: "Backpacks",
+      MainCategory: "Backpacks",
       href: "#",
     },
     {
-      name: "Handbags, Bags & Wallets",
+      MainCategory: "Handbags, Bags & Wallets",
       href: "#",
     },
     {
-      name: "Luggages & Trolleys",
+      MainCategory: "Luggages & Trolleys",
       href: "#",
     },
     {
-      name: "Maternity",
+      MainCategory: "Maternity",
       href: "#",
     },
     {
-      name: "Sunglasses & Frames",
+      MainCategory: "Sunglasses & Frames",
       href: "#",
     },
   ],
 
   Kids: [
     {
-      name: "Clothing",
+      MainCategory: "Boys Clothing",
       subcategories: [
         { name: "T-Shirts", href: "#" },
         { name: "Shirts", href: "#" },
@@ -293,7 +284,7 @@ const data = {
     },
 
     {
-      name: "Clothing",
+      MainCategory: "Clothing Girls",
       subcategories: [
         { name: "Dresses", href: "#" },
         { name: "Tops", href: "#" },
@@ -314,7 +305,7 @@ const data = {
     },
 
     {
-      name: "Footwear",
+      MainCategory: "Footwear",
       subcategories: [
         { name: "Casual Shoes", href: "#" },
         { name: "Flipflops", href: "#" },
@@ -328,7 +319,7 @@ const data = {
     },
 
     {
-      name: "Brands",
+      MainCategory: "Brands",
       subcategories: [
         { name: "H&M", href: "#" },
         { name: "Max Kids", href: "#" },
@@ -342,7 +333,7 @@ const data = {
     },
 
     {
-      name: "Infants",
+      MainCategory: "Infants",
       subcategories: [
         { name: "Bodysuits", href: "#" },
         { name: "Rompers & Sleepsuits", href: "#" },
@@ -359,7 +350,7 @@ const data = {
     },
 
     {
-      name: "Kids Accessories",
+      MainCategory: "Kids Accessories",
       subcategories: [
         { name: "Bags & Backpacks", href: "#" },
         { name: "Watches", href: "#" },
@@ -371,7 +362,7 @@ const data = {
     },
 
     {
-      name: "Toys & Games",
+      MainCategory: "Toys & Games",
       subcategories: [
         { name: "Learning & Development", href: "#" },
         { name: "Activity Toys", href: "#" },
@@ -383,7 +374,7 @@ const data = {
 
   "Home & Living": [
     {
-      name: "Bed Linen & Furnishing",
+      MainCategory: "Bed Linen & Furnishing",
       subcategories: [
         { name: "Bed Runners", href: "#" },
         { name: "Mattress Protectors", href: "#" },
@@ -398,7 +389,7 @@ const data = {
       ],
     },
     {
-      name: "Flooring",
+      MainCategory: "Flooring",
       subcategories: [
         { name: "Floor Runners", href: "#" },
         { name: "Carpets", href: "#" },
@@ -407,7 +398,7 @@ const data = {
       ],
     },
     {
-      name: "Bath",
+      MainCategory: "Bath",
       subcategories: [
         { name: "Bath Towels", href: "#" },
         { name: "Hand & Face Towels", href: "#" },
@@ -420,7 +411,7 @@ const data = {
       ],
     },
     {
-      name: "Lamps & Lighting",
+      MainCategory: "Lamps & Lighting",
       subcategories: [
         { name: "Floor Lamps", href: "#" },
         { name: "Ceiling Lamps", href: "#" },
@@ -432,7 +423,7 @@ const data = {
     },
 
     {
-      name: "Brands",
+      MainCategory: "Brands",
       subcategories: [
         { name: "H&M", href: "#" },
         { name: "Marks & Spencer", href: "#" },
@@ -453,7 +444,7 @@ const data = {
       ],
     },
     {
-      name: "Home Décor",
+      MainCategory: "Home Décor",
       subcategories: [
         { name: "Plants & Planters", href: "#" },
         { name: "Aromas & Candles", href: "#" },
@@ -472,7 +463,7 @@ const data = {
       ],
     },
     {
-      name: "Kitchen & Table",
+      MainCategory: "Kitchen & Table",
       subcategories: [
         { name: "Table Runners", href: "#" },
         { name: "Dinnerware & Serveware", href: "#" },
@@ -484,7 +475,7 @@ const data = {
       ],
     },
     {
-      name: "Storage",
+      MainCategory: "Storage",
       subcategories: [
         { name: "Bins", href: "#" },
         { name: "Hangers", href: "#" },
@@ -497,7 +488,7 @@ const data = {
 
   Beauty: [
     {
-      name: "Makeup",
+      MainCategory: "Makeup",
       subcategories: [
         { name: "Lipstick", href: "#" },
         { name: "Lip Gloss", href: "#" },
@@ -514,7 +505,7 @@ const data = {
       ],
     },
     {
-      name: "Skincare, Bath & Body",
+      MainCategory: "Skincare, Bath & Body",
       subcategories: [
         { name: "Face Moisturiser", href: "#" },
         { name: "Cleanser", href: "#" },
@@ -533,7 +524,7 @@ const data = {
       ],
     },
     {
-      name: "Haircare",
+      MainCategory: "Haircare",
       subcategories: [
         { name: "Shampoo", href: "#" },
         { name: "Conditioner", href: "#" },
@@ -546,7 +537,7 @@ const data = {
       ],
     },
     {
-      name: "Fragrances",
+      MainCategory: "Fragrances",
       subcategories: [
         { name: "Perfume", href: "#" },
         { name: "Deodorant", href: "#" },
@@ -554,7 +545,7 @@ const data = {
       ],
     },
     {
-      name: "Appliances",
+      MainCategory: "Appliances",
       subcategories: [
         { name: "Hair Straightener", href: "#" },
         { name: "Hair Dryer", href: "#" },
@@ -562,7 +553,7 @@ const data = {
       ],
     },
     {
-      name: "Top Brands",
+      MainCategory: "Top Brands",
       subcategories: [
         { name: "Lakme", href: "#" },
         { name: "Maybelline", href: "#" },
@@ -582,7 +573,7 @@ const data = {
       ],
     },
     {
-      name: "Men's Grooming",
+      MainCategory: "Men's Grooming",
       subcategories: [
         { name: "Trimmers", href: "#" },
         { name: "Beard Oil", href: "#" },
@@ -590,18 +581,18 @@ const data = {
       ],
     },
     {
-      name: "Beauty Gift & Makeup Set",
+      MainCategory: "Beauty Gift & Makeup Set",
       subcategories: [
         { name: "Beauty Gift", href: "#" },
         { name: "Makeup Kit", href: "#" },
       ],
     },
     {
-      name: "Premium Beauty",
+      MainCategory: "Premium Beauty",
       subcategories: [],
     },
     {
-      name: "Wellness & Hygiene",
+      MainCategory: "Wellness & Hygiene",
       subcategories: [],
     },
   ],

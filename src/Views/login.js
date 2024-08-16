@@ -47,11 +47,12 @@ function Login() {
 
   return (
     <>
+      {" "}
+      <Header />
       <div
         className="relative bg-cover bg-center min-h-screen overflow-hidden"
         style={{ backgroundImage: `url(${animatedBg})` }}
       >
-        <Header />
         <ToastContainer />
         <div className="relative isolate flex items-center justify-center min-h-screen px-6 pt-14 lg:px-8 ">
           <div className="mx-auto w-full max-w-md bg-white shadow-lg rounded-lg py-8 px-6 sm:py-12 sm:px-10">
