@@ -9,7 +9,7 @@ import {
 } from "@headlessui/react";
 
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import headerLogo from "../images/shopyfy-transparent.png";
+import headerLogo from "../images/fashion-cart-logo.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBell, faUserCircle } from "@fortawesome/free-regular-svg-icons";
 import { navigation, data } from "../config/config";
@@ -39,7 +39,7 @@ function Header() {
           <div className="flex lg:flex-1">
             <a href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
-              <img alt="" src={headerLogo} className="h-10 w-auto" />
+              <img alt="" src={headerLogo} className="h-8 w-auto " />
             </a>
           </div>
           <div className="flex items-center align-middle lg:hidden">
@@ -92,7 +92,7 @@ function Header() {
                 <Popover key={item.name} className="relative">
                   <PopoverButton
                     onClick={() => handleNavItemClick(item.name)}
-                    className="inline-flex items-center gap-x-1 text-md font-bold leading-6 text-black hover:bg-indigo-600 hover:text-white rounded-md px-3 py-2"
+                    className="inline-flex items-center gap-x-1 text-md font-bold leading-6 text-indigo-600 hover:bg-indigo-600 hover:text-white rounded-md px-3 py-2"
                     style={{
                       backgroundColor: activeNavItem === item.name ? "" : "",
                     }}
@@ -114,7 +114,7 @@ function Header() {
                             key={category.MainCategory}
                             className="flex flex-col"
                           >
-                            <h3 className="text-sm font-bold text-red-600 mb-2">
+                            <h3 className="text-sm font-bold text-indigo-600 mb-2">
                               {category.MainCategory}
                             </h3>
                             {category.subcategories && (
@@ -123,7 +123,7 @@ function Header() {
                                   <a
                                     key={subcat.name}
                                     href={subcat.href}
-                                    className="block text-black hover:text-red-500 mb-1 text-sm font-sans  "
+                                    className="block text-black hover:text-indigo-600 mb-1 text-sm font-sans  "
                                   >
                                     {subcat.name}
                                   </a>
@@ -140,7 +140,7 @@ function Header() {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-md font-bold leading-6 text-black hover:bg-indigo-600 hover:text-white rounded-md px-3 py-2"
+                  className="text-md font-bold leading-6 text-indigo-600 hover:bg-indigo-600 hover:text-white rounded-md px-3 py-2"
                 >
                   {item.name}
                 </a>
