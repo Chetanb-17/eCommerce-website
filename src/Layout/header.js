@@ -16,6 +16,7 @@ import { navigation, data } from "../config/config";
 
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
 function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -44,17 +45,38 @@ function Header() {
           <div className="flex items-center align-middle lg:hidden">
             <a
               href="/login"
-              className="rounded-md px-3 py-2 text-white shadow-sm hover:bg-slate-200 focus-visible:outline focus-visible:outline-2 text-md font-bold leading-6 text-white-900"
+              className="-m-2.5 inline-flex items-center justify-center px-4 py-2 rounded-md p-2.5 text-black"
+            >
+              <FontAwesomeIcon
+                icon={faCartShopping}
+                className="text-indigo-600 w-6  h-5 mr-1"
+              />
+            </a>
+
+            <a
+              href="/login"
+              className="-m-2.5 inline-flex items-center justify-center px-4 py-2 rounded-md p-2.5 text-black"
             >
               <FontAwesomeIcon
                 icon={faHeart}
                 className="text-indigo-600 w-6  h-5 mr-1"
               />
             </a>
+
+            <a
+              href="/login"
+              className="-m-2.5 inline-flex items-center justify-center px-4 py-2 rounded-md p-2.5 text-black"
+            >
+              <FontAwesomeIcon
+                icon={faBell}
+                className="text-indigo-600 w-6  h-5 mr-1"
+              />
+            </a>
+
             <button
               type="button"
               onClick={() => setMobileMenuOpen(true)}
-              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-black"
+              className="-m-2.5 inline-flex items-center justify-center px-4 py-2 rounded-md p-2.5 text-black"
             >
               <span className="sr-only">Open main menu</span>
               <Bars3Icon
@@ -70,7 +92,7 @@ function Header() {
                 <Popover key={item.name} className="relative">
                   <PopoverButton
                     onClick={() => handleNavItemClick(item.name)}
-                    className="inline-flex items-center gap-x-1 text-md font-semibold leading-6 text-black hover:bg-indigo-600 hover:text-white rounded-md px-3 py-2"
+                    className="inline-flex items-center gap-x-1 text-md font-bold leading-6 text-black hover:bg-indigo-600 hover:text-white rounded-md px-3 py-2"
                     style={{
                       backgroundColor: activeNavItem === item.name ? "" : "",
                     }}
@@ -118,7 +140,7 @@ function Header() {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-md font-semibold leading-6 text-black hover:bg-indigo-600 hover:text-white rounded-md px-3 py-2"
+                  className="text-md font-bold leading-6 text-black hover:bg-indigo-600 hover:text-white rounded-md px-3 py-2"
                 >
                   {item.name}
                 </a>
@@ -128,31 +150,34 @@ function Header() {
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <a
               href="/login"
-              className="rounded-md px-3.5 py-2.5 text-white shadow-sm hover:bg-slate-200 focus-visible:outline focus-visible:outline-2 text-md font-bold leading-6 text-white-900"
+              className="rounded-md px-3.5 py-2.5 text-white   hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 text-md font-bold leading-6 text-white-900"
             >
               <FontAwesomeIcon
-                icon={faHeart}
-                className="text-indigo-600   h-6"
+                icon={faCartShopping}
+                className="text-indigo-600 h-6"
               />
+            </a>
+            <a
+              href="/login"
+              className="rounded-md px-3.5 py-2.5 text-white   hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 text-md font-bold leading-6 text-white-900"
+            >
+              <FontAwesomeIcon icon={faHeart} className="text-indigo-600 h-6" />
             </a>
 
             <a
               href="/login"
-              className="rounded-md px-3.5 py-2.5 text-white shadow-sm hover:bg-slate-200 focus-visible:outline focus-visible:outline-2 text-md font-bold leading-6 text-white-900"
+              className="rounded-md px-3.5 py-2.5 text-white   hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 text-md font-bold leading-6 text-white-900"
             >
-              <FontAwesomeIcon
-                icon={faBell}
-                className="text-indigo-600   h-6"
-              />
+              <FontAwesomeIcon icon={faBell} className="text-indigo-600 h-6" />
             </a>
 
             <a
               href="/login"
-              className="rounded-md px-3.5 py-2.5 text-white shadow-sm hover:bg-slate-200 focus-visible:outline focus-visible:outline-2 text-md font-bold leading-6 text-white-900"
+              className="rounded-md px-3.5 py-2.5 text-white   hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 text-md font-bold leading-6 text-white-900"
             >
               <FontAwesomeIcon
                 icon={faUserCircle}
-                className="text-indigo-600   h-6"
+                className="text-indigo-600 h-6"
               />
             </a>
           </div>
