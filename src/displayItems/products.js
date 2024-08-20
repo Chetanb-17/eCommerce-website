@@ -54,7 +54,7 @@ export default function ProductsPage() {
 
                 <div className="absolute inset-0 flex flex-col p-1 bg-opacity-50 transition-opacity duration-300">
                   <div className="flex flex-row items-end  justify-between w-full h-full ">
-                    <div className="flex items-center space-x-1 opacity-90 text-red-500 bg-zinc-200 p-1">
+                    <div className="flex items-center space-x-1 opacity-90 text-indigo-500 bg-zinc-200 p-1">
                       <h3 className="text-xs text-black font-bold flex items-center">
                         <a
                           href={product.href}
@@ -64,7 +64,7 @@ export default function ProductsPage() {
                           <span className="text-xs">{product.rating}</span>
                           <StarIcon
                             aria-hidden="true"
-                            className="text-green-600 h-4 w-4 flex-shrink-0 text-xs"
+                            className="text-indigo-600 h-4 w-4 flex-shrink-0 text-xs"
                           />
                           <span>|</span>
                           <span className="text-xs">{product.reviewCount}</span>

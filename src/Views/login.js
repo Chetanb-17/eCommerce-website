@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { auth } from "../config/firebase";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Logo from "../images/shopyfy-transparent.png";
+import Logo from "../images/fashion-cart-logo.png";
 import animatedBg from "../images/AnimatedBG.jpg";
 import Header from "../Layout/header";
 import Divider from "../Components/Divider";
@@ -56,9 +56,9 @@ function Login() {
         <ToastContainer />
         <div className="relative isolate flex items-center justify-center min-h-screen px-6 pt-14 lg:px-8 ">
           <div className="mx-auto w-full max-w-md bg-white shadow-lg rounded-lg py-8 px-6 sm:py-12 sm:px-10">
-            <div className="flex justify-center mb-6">
+            {/* <div className="flex justify-center mb-6">
               <img alt="Your Company" src={Logo} className="h-10 w-auto" />
-            </div>
+            </div> */}
             <h2 className="text-center text-2xl font-bold leading-9 tracking-tight text-gray-900 mb-4">
               Log in to your Account
             </h2>
