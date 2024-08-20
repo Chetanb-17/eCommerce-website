@@ -59,7 +59,7 @@ export default function Dashboard() {
             <div className="fixed inset-0 z-40 flex">
               <DialogPanel
                 transition
-                className="relative ml-auto flex h-full w-full max-w-xs transform flex-col overflow-y-auto bg-white py-4 pb-12 shadow-xl transition duration-300 ease-in-out data-[closed]:translate-x-full"
+                className="relative ml-auto flex h-full w-full max-w-xs transform flex-col overflow-y-auto bg-white  pb-12 shadow-xl transition duration-300 ease-in-out data-[closed]:translate-x-full"
               >
                 <div className="flex items-center justify-between px-4">
                   <h2 className="text-lg font-medium text-gray-900">Filters</h2>
