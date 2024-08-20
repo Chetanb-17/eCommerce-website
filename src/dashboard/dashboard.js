@@ -1,6 +1,6 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import Header from "../Layout/header";
-import Products from "../displayItems/products";
+// import Products from "../displayItems/products";
 import { filters } from "../config/config";
 
 import {
@@ -23,6 +23,7 @@ import {
   PlusIcon,
   Squares2X2Icon,
 } from "@heroicons/react/20/solid";
+const Products = React.lazy(() => import("../displayItems/products"));
 
 const sortOptions = [
   { name: "Most Popular", href: "#", current: true },
@@ -204,7 +205,7 @@ export default function Dashboard() {
               </div>
             </div>
 
-            <section aria-labelledby="products-heading" className="pb-24 pt-4">
+            <section aria-labelledby="products-heading" className="pb-24">
               <h2 id="products-heading" className="sr-only">
                 Products
               </h2>

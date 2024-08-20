@@ -43,13 +43,7 @@ export default function ProductsPage() {
                 <img
                   src={product.imageSrc}
                   alt={product.imageAlt}
-                  className="object-cover w-full h-full group-hover:opacity-60"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    // aspectRatio: "6/5",
-                    objectFit: "contain",
-                  }}
+                  className="object-fit w-full h-full"
                 />
 
                 <div className="absolute inset-0 flex flex-col p-1 bg-opacity-50 transition-opacity duration-300">

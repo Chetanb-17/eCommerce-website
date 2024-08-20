@@ -9,7 +9,7 @@ export const products = [
     reviewCount: "117",
     href: "#",
     imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/product-quick-preview-02-detail.jpg",
+      "https://assets.myntassets.com/w_412,q_60,dpr_2,fl_progressive/assets/images/16713294/2023/1/5/b50504dc-42f5-40fa-b9f1-923f5e5c849f1672908428498-The-Souled-Store-Men-Denim-Blue-Solid-Round-Neck-Oversized-T-6.jpg",
     imageAlt: "Two each of gray, white, and black shirts arranged on table.",
     color: "black",
     colors: [
@@ -38,7 +38,7 @@ export const products = [
     reviewCount: 92,
     href: "#",
     imageSrc:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUKcBfU1sxyXgMhpt9AIVKOIS08lD1u9Do9YiIxchw04pSH1vN5c4-tDq69yN-wav_9i0&usqp=CAU",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOXxaxAYFiM0v3REAhpv-H_no17W099YLMa38U8K7apOG9o7QIfvQeUvSVoQxZXPiwIS8&usqp=CAU",
     imageAlt: "Denim jacket with button closure and front pockets.",
     color: "black",
     colors: [
@@ -55,36 +55,6 @@ export const products = [
 
   {
     id: 3,
-    name: "Pep Jeans",
-    decscription: "Men Solid  cotton",
-    offerPrice: "RS. ₹299",
-    originalPrice: "Rs. 799₹",
-    rating: 4.9,
-    reviewCount: 117,
-    href: "#",
-    imageSrc:
-      "https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/Search/676/C10636.jpg?im=Resize,width=350",
-    imageAlt: "Two each of gray, white, and black shirts arranged on table.",
-    color: "black",
-    colors: [
-      { name: "White", class: "bg-white", selectedClass: "ring-gray-400" },
-      { name: "Gray", class: "bg-gray-200", selectedClass: "ring-gray-400" },
-      { name: "Black", class: "bg-gray-900", selectedClass: "ring-gray-900" },
-    ],
-    sizes: [
-      { name: "XXS", inStock: true },
-      { name: "XS", inStock: true },
-      { name: "S", inStock: true },
-      { name: "M", inStock: true },
-      { name: "L", inStock: true },
-      { name: "XL", inStock: true },
-      { name: "XXL", inStock: true },
-      { name: "XXXL", inStock: false },
-    ],
-  },
-
-  {
-    id: 4,
     name: "Basic Tee",
     decscription: "Men Solid  cotton",
     offerPrice: "RS. ₹192",
@@ -93,7 +63,7 @@ export const products = [
     reviewCount: "117",
     href: "#",
     imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/product-quick-preview-02-detail.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2fOD6ej7xd6RFr5aUKUWnBN-1fTVtFeERVxU0NsO7PYrNYXT1frblJzjTPW50d_fl75E&usqp=CAU",
     imageAlt: "Two each of gray, white, and black shirts arranged on table.",
     color: "black",
     colors: [
@@ -112,6 +82,30 @@ export const products = [
       { name: "XXXL", inStock: true },
     ],
   },
+  {
+    id: 4,
+    name: "Classic Denim Jacket",
+    decscription: "Men Solid  cotton",
+    offerPrice: "RS. ₹149",
+    originalPrice: "Rs. 799₹",
+    rating: 4.5,
+    reviewCount: 92,
+    href: "#",
+    imageSrc:
+      "https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/2024/AUGUST/14/iAj7lLli_ce37e14f44bd4f38b8c0f2fd0e90c8cf.jpg",
+    imageAlt: "Denim jacket with button closure and front pockets.",
+    color: "black",
+    colors: [
+      { name: "Blue", class: "bg-blue-500", selectedClass: "ring-blue-500" },
+      { name: "Black", class: "bg-black", selectedClass: "ring-black" },
+    ],
+    sizes: [
+      { name: "S", inStock: true },
+      { name: "M", inStock: true },
+      { name: "L", inStock: true },
+      { name: "XL", inStock: true },
+    ],
+  },
 
   {
     id: 5,
@@ -123,7 +117,7 @@ export const products = [
     reviewCount: "117",
     href: "#",
     imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/product-quick-preview-02-detail.jpg",
+      "https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/25899798/2023/11/16/2324653f-fae2-455f-99b9-85415660e2d81700119381390AeroArmourUnisexOliveGreenT-shirt1.jpg",
     imageAlt: "Two each of gray, white, and black shirts arranged on table.",
     color: "black",
     colors: [
@@ -152,7 +146,7 @@ export const products = [
     reviewCount: 92,
     href: "#",
     imageSrc:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUKcBfU1sxyXgMhpt9AIVKOIS08lD1u9Do9YiIxchw04pSH1vN5c4-tDq69yN-wav_9i0&usqp=CAU",
+      "https://assets.myntassets.com/w_412,q_60,dpr_2,fl_progressive/assets/images/28137930/2024/5/21/949cb890-27a7-452b-b4e6-ded28e3079a51716266033703-NOBERO-Men-Typography-T-shirt-9271716266033629-6.jpg",
     imageAlt: "Denim jacket with button closure and front pockets.",
     color: "black",
     colors: [
@@ -169,15 +163,15 @@ export const products = [
 
   {
     id: 7,
-    name: "Pep Jeans",
+    name: "Basic Tee",
     decscription: "Men Solid  cotton",
-    offerPrice: "RS. ₹299",
+    offerPrice: "RS. ₹192",
     originalPrice: "Rs. 799₹",
-    rating: 4.9,
-    reviewCount: 117,
+    rating: 2.9,
+    reviewCount: "117",
     href: "#",
     imageSrc:
-      "https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/Search/676/C10636.jpg?im=Resize,width=350",
+      "https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/27226100/2024/1/29/0d63dbfd-673d-49d0-be10-751fa0d54c0f1706543722864BULLMERMenTribalPrintedAppliqueT-shirt1.jpg",
     imageAlt: "Two each of gray, white, and black shirts arranged on table.",
     color: "black",
     colors: [
@@ -193,71 +187,12 @@ export const products = [
       { name: "L", inStock: true },
       { name: "XL", inStock: true },
       { name: "XXL", inStock: true },
-      { name: "XXXL", inStock: false },
+      { name: "XXXL", inStock: true },
     ],
   },
 
   {
     id: 8,
-    name: "Basic Tee",
-    decscription: "Men Solid  cotton",
-    offerPrice: "RS. ₹192",
-    originalPrice: "Rs. 799₹",
-    rating: 2.9,
-    reviewCount: "117",
-    href: "#",
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/product-quick-preview-02-detail.jpg",
-    imageAlt: "Two each of gray, white, and black shirts arranged on table.",
-    color: "black",
-    colors: [
-      { name: "White", class: "bg-white", selectedClass: "ring-gray-400" },
-      { name: "Gray", class: "bg-gray-200", selectedClass: "ring-gray-400" },
-      { name: "Black", class: "bg-gray-900", selectedClass: "ring-gray-900" },
-    ],
-    sizes: [
-      { name: "XXS", inStock: true },
-      { name: "XS", inStock: true },
-      { name: "S", inStock: true },
-      { name: "M", inStock: true },
-      { name: "L", inStock: true },
-      { name: "XL", inStock: true },
-      { name: "XXL", inStock: true },
-      { name: "XXXL", inStock: true },
-    ],
-  },
-
-  {
-    id: 9,
-    name: "Basic Tee",
-    decscription: "Men Solid  cotton",
-    offerPrice: "RS. ₹192",
-    originalPrice: "Rs. 799₹",
-    rating: 2.9,
-    reviewCount: "117",
-    href: "#",
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/product-quick-preview-02-detail.jpg",
-    imageAlt: "Two each of gray, white, and black shirts arranged on table.",
-    color: "black",
-    colors: [
-      { name: "White", class: "bg-white", selectedClass: "ring-gray-400" },
-      { name: "Gray", class: "bg-gray-200", selectedClass: "ring-gray-400" },
-      { name: "Black", class: "bg-gray-900", selectedClass: "ring-gray-900" },
-    ],
-    sizes: [
-      { name: "XXS", inStock: true },
-      { name: "XS", inStock: true },
-      { name: "S", inStock: true },
-      { name: "M", inStock: true },
-      { name: "L", inStock: true },
-      { name: "XL", inStock: true },
-      { name: "XXL", inStock: true },
-      { name: "XXXL", inStock: true },
-    ],
-  },
-  {
-    id: 10,
     name: "Classic Denim Jacket",
     decscription: "Men Solid  cotton",
     offerPrice: "RS. ₹149",
@@ -266,7 +201,31 @@ export const products = [
     reviewCount: 92,
     href: "#",
     imageSrc:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUKcBfU1sxyXgMhpt9AIVKOIS08lD1u9Do9YiIxchw04pSH1vN5c4-tDq69yN-wav_9i0&usqp=CAU",
+      "https://assets.myntassets.com/w_412,q_60,dpr_2,fl_progressive/assets/images/8277543/2019/1/29/6f3e3d59-afd5-4f18-9dab-a8ac3f80e58a1548763603067-HERENOW-Men-Tshirts-9921548763601649-1.jpg",
+    imageAlt: "Denim jacket with button closure and front pockets.",
+    color: "black",
+    colors: [
+      { name: "Blue", class: "bg-blue-500", selectedClass: "ring-blue-500" },
+      { name: "Black", class: "bg-black", selectedClass: "ring-black" },
+    ],
+    sizes: [
+      { name: "S", inStock: true },
+      { name: "M", inStock: true },
+      { name: "L", inStock: true },
+      { name: "XL", inStock: true },
+    ],
+  },
+  {
+    id: 9,
+    name: "Classic Denim Jacket",
+    decscription: "Men Solid  cotton",
+    offerPrice: "RS. ₹149",
+    originalPrice: "Rs. 799₹",
+    rating: 4.5,
+    reviewCount: 92,
+    href: "#",
+    imageSrc:
+      "https://assets.myntassets.com/w_412,q_60,dpr_2,fl_progressive/assets/images/6712798/2018/6/13/1a259e31-188e-4e42-8764-1cc3ef3a30a61528880273604-Genx-Men-Tshirts-5891528880273357-1.jpg",
     imageAlt: "Denim jacket with button closure and front pockets.",
     color: "black",
     colors: [
@@ -281,63 +240,57 @@ export const products = [
     ],
   },
 
-  {
-    id: 11,
-    name: "Pep Jeans",
-    decscription: "Men Solid  cotton",
-    offerPrice: "RS. ₹299",
-    originalPrice: "Rs. 799₹",
-    rating: 4.9,
-    reviewCount: 117,
-    href: "#",
-    imageSrc:
-      "https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/Search/676/C10636.jpg?im=Resize,width=350",
-    imageAlt: "Two each of gray, white, and black shirts arranged on table.",
-    color: "black",
-    colors: [
-      { name: "White", class: "bg-white", selectedClass: "ring-gray-400" },
-      { name: "Gray", class: "bg-gray-200", selectedClass: "ring-gray-400" },
-      { name: "Black", class: "bg-gray-900", selectedClass: "ring-gray-900" },
-    ],
-    sizes: [
-      { name: "XXS", inStock: true },
-      { name: "XS", inStock: true },
-      { name: "S", inStock: true },
-      { name: "M", inStock: true },
-      { name: "L", inStock: true },
-      { name: "XL", inStock: true },
-      { name: "XXL", inStock: true },
-      { name: "XXXL", inStock: false },
-    ],
-  },
-
-  {
-    id: 12,
-    name: "Basic Tee",
-    decscription: "Men Solid  cotton",
-    offerPrice: "RS. ₹192",
-    originalPrice: "Rs. 799₹",
-    rating: 2.9,
-    reviewCount: "117",
-    href: "#",
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/product-quick-preview-02-detail.jpg",
-    imageAlt: "Two each of gray, white, and black shirts arranged on table.",
-    color: "black",
-    colors: [
-      { name: "White", class: "bg-white", selectedClass: "ring-gray-400" },
-      { name: "Gray", class: "bg-gray-200", selectedClass: "ring-gray-400" },
-      { name: "Black", class: "bg-gray-900", selectedClass: "ring-gray-900" },
-    ],
-    sizes: [
-      { name: "XXS", inStock: true },
-      { name: "XS", inStock: true },
-      { name: "S", inStock: true },
-      { name: "M", inStock: true },
-      { name: "L", inStock: true },
-      { name: "XL", inStock: true },
-      { name: "XXL", inStock: true },
-      { name: "XXXL", inStock: true },
-    ],
-  },
+  // {
+  //   id: 9,
+  //   name: "Basic Tee",
+  //   decscription: "Men Solid  cotton",
+  //   offerPrice: "RS. ₹192",
+  //   originalPrice: "Rs. 799₹",
+  //   rating: 2.9,
+  //   reviewCount: "117",
+  //   href: "#",
+  //   imageSrc:
+  //     "https://tailwindui.com/img/ecommerce-images/product-quick-preview-02-detail.jpg",
+  //   imageAlt: "Two each of gray, white, and black shirts arranged on table.",
+  //   color: "black",
+  //   colors: [
+  //     { name: "White", class: "bg-white", selectedClass: "ring-gray-400" },
+  //     { name: "Gray", class: "bg-gray-200", selectedClass: "ring-gray-400" },
+  //     { name: "Black", class: "bg-gray-900", selectedClass: "ring-gray-900" },
+  //   ],
+  //   sizes: [
+  //     { name: "XXS", inStock: true },
+  //     { name: "XS", inStock: true },
+  //     { name: "S", inStock: true },
+  //     { name: "M", inStock: true },
+  //     { name: "L", inStock: true },
+  //     { name: "XL", inStock: true },
+  //     { name: "XXL", inStock: true },
+  //     { name: "XXXL", inStock: true },
+  //   ],
+  // },
+  // {
+  //   id: 10,
+  //   name: "Classic Denim Jacket",
+  //   decscription: "Men Solid  cotton",
+  //   offerPrice: "RS. ₹149",
+  //   originalPrice: "Rs. 799₹",
+  //   rating: 4.5,
+  //   reviewCount: 92,
+  //   href: "#",
+  //   imageSrc:
+  //     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUKcBfU1sxyXgMhpt9AIVKOIS08lD1u9Do9YiIxchw04pSH1vN5c4-tDq69yN-wav_9i0&usqp=CAU",
+  //   imageAlt: "Denim jacket with button closure and front pockets.",
+  //   color: "black",
+  //   colors: [
+  //     { name: "Blue", class: "bg-blue-500", selectedClass: "ring-blue-500" },
+  //     { name: "Black", class: "bg-black", selectedClass: "ring-black" },
+  //   ],
+  //   sizes: [
+  //     { name: "S", inStock: true },
+  //     { name: "M", inStock: true },
+  //     { name: "L", inStock: true },
+  //     { name: "XL", inStock: true },
+  //   ],
+  // },
 ];
